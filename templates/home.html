@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'base_generic.html' %}
+
+    {% block content %}
+      <h1>Welcome to the Bookstore!</h1>
+      
+      {% if user.is_authenticated %}
+        <p>Welcome, {{ user.username }}!</p>
+        
+        {% if user.is_seller %}
+          <p>As a seller, you can add books and authors:</p>
+          <ul>
+            <li><a href="{% url 'add_book' %}">Add Book</a></li>
+            <li><a href="{% url 'add_author' %}">Add Author</a></li>
+          </ul>
+        {% else %}
+          <p>You are logged in as a buyer. Enjoy browsing the books!</p>
+          <a href="{% url 'book_list' %}">View Available Books</a>
+
+        {% endif %}
+        
+      {% else %}
+        <p>You are not logged in. <a href="{% url 'login' %}">Login</a> or <a href="{% url 'register' %}">Register</a> to get started.</p>
+      {% endif %}
+    {% endblock %}
+    
+</body>
+</html>
