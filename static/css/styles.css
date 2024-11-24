@@ -1,0 +1,131 @@
+/* General Reset */
+body, html {
+    margin: 50px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Main Container */
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: right;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+}
+
+
+h1 {
+    text-align: center;
+    color: #051912; 
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+
+
+li a {
+    text-decoration: none;
+    color: #ffffff;
+    background: #296746; 
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+li a:hover {
+    background: #113C25; 
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    background: #296746; 
+    padding: 5px 10px;
+    border-radius: 0;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+button {
+    background-color: #296746;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 0;
+    display: inline-flex;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+button:hover{
+    background-color: #113C25;
+}
+
+a:hover {
+    background: #113C25; 
+}
+
+p a {
+    color: #fbfbfb; 
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+p a:hover {
+    color: #8f99a9; 
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100% ;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #888;
+    color: #f9f9f9;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    a {
+        padding: 8px 12px;
+    }
+
+    ul li a {
+        padding: 8px 12px;
+    }
+}

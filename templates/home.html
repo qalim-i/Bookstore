@@ -1,12 +1,16 @@
+{% extends 'base_generic.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>Bookstore</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+  </head>
 <body>
-    {% extends 'base_generic.html' %}
+    
 
     {% block content %}
       <h1>Welcome to the Bookstore!</h1>
@@ -30,6 +34,9 @@
         <p>You are not logged in. <a href="{% url 'login' %}">Login</a> or <a href="{% url 'register' %}">Register</a> to get started.</p>
       {% endif %}
     {% endblock %}
-    
+
+    <footer>
+      <p>&copy; 2024 Bookstore</p>
+  </footer>
 </body>
 </html>
